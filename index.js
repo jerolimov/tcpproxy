@@ -7,14 +7,14 @@ var util = require('util'),
 
 program
 	.version('0.1.0')
-	.option('-b, --bindAddress <value>',  'Local address where the proxy should be bind, default 127.0.0.1', '127.0.0.1')
-	.option('-l, --bindPort <n>',  'Local port where the proxy should be bind, default 8080', 8080, parseInt)
-	.option('-a, --originAddress <value>', 'Address of the origin server, required')
-	.option('-p, --originPort <n>', 'Port of the origin server, default 80', 80, parseInt)
-	.option('-d, --delayConnection <n>', 'Delay in millisecond until the connection will be established to the origin server, default 1000ms', 1000, parseInt)
+	.option('-b, --bindAddress <host>',  'Local address where the proxy should be bind, default 127.0.0.1', '127.0.0.1')
+	.option('-l, --bindPort <port>',  'Local port where the proxy should be bind, default 8080', 8080, parseInt)
+	.option('-a, --originAddress <host>', 'Address of the origin server, required')
+	.option('-p, --originPort <port>', 'Port of the origin server, default 80', 80, parseInt)
+	.option('-d, --delayConnection <ms>', 'Delay in millisecond until the connection will be established to the origin server, default 1000ms', 1000, parseInt)
 	.option('--bps, --delayBytesPerSecond <b/ms>', 'Delay bytes per millisecond (bytes/millisecond)')
-	.option('--delayChunkFromClientToOrigin <n>', 'Delay chunk from client to origin in millisecond', parseInt)
-	.option('--delayChunkFromOriginToClient <n>', 'Delay chunk from origin to client in millisecond', parseInt)
+	.option('--delayChunkFromClientToOrigin <ms>', 'Delay chunk from client to origin in millisecond', 0, parseInt)
+	.option('--delayChunkFromOriginToClient <ms>', 'Delay chunk from origin to client in millisecond', 0, parseInt)
 	.parse(process.argv);
 
 if (!program.originAddress) {

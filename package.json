@@ -1,6 +1,6 @@
 {
 	"name": "tcpproxy",
-	"description": "TCPproxy which could simple throttle TCP connections",
+	"description": "TCPproxy which just throttle TCP connections",
 	"version": "0.1.0",
 	"author": "Christoph Jerolimov",
 	"license": "MIT",

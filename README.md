@@ -1,4 +1,4 @@
-# TCPproxy which could simple throttle TCP connections
+# TCPproxy which just throttle TCP connections
 
 	npm install -g tcpproxy
 
@@ -12,11 +12,15 @@ You can throttle the connection with many other options, for example with 10 byt
 
 Other options:
 
-	-b, --bindAddress <value>            Local address where the proxy should be bind, default 127.0.0.1
-	-l, --bindPort <n>                   Local port where the proxy should be bind, default 8080
-	-a, --originAddress <value>          Address of the origin server, required
-	-p, --originPort <n>                 Port of the origin server, default 80
-	-d, --delayConnection <n>            Delay in millisecond until the connection will be established to the origin server, default 1000ms
+	-b, --bindAddress <host>             Local address where the proxy should be bind,
+	                                     default 127.0.0.1
+	-l, --bindPort <port>                Local port where the proxy should be bind,
+	                                     default 8080
+	-a, --originAddress <host>           Address of the origin server, required
+	-p, --originPort <port>              Port of the origin server, default 80
+	-d, --delayConnection <ms>           Delay in millisecond until the connection will
+	                                     be established to the origin server,
+	                                     default 1000ms
 	--bps, --delayBytesPerSecond <b/ms>  Delay bytes per millisecond (bytes/millisecond)
-	--delayChunkFromClientToOrigin <n>   Delay chunk from client to origin in millisecond
-	--delayChunkFromOriginToClient <n>   Delay chunk from origin to client in millisecond
+	--delayChunkFromClientToOrigin <ms>  Delay chunk from client to origin in millisecond
+	--delayChunkFromOriginToClient <ms>  Delay chunk from origin to client in millisecond

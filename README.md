@@ -1,4 +1,4 @@
-# TCPproxy which just throttle TCP connections
+# TCPproxy which throttle the connections
 
 	npm install -g tcpproxy
 

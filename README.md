@@ -1,14 +1,17 @@
-# TCPproxy which throttle the connections
+## TCPproxy: Throttle your TCP connections now!
 
-	npm install -g tcpproxy
+	$ npm install -g tcpproxy
 
 The default command will delay each TCP connection one second and redirect port 8080 to 80:
 
-	tcpproxy -a www.google.com
+	$ tcpproxy -a www.google.com
+	
+	Finish transfer! -- Time: 150 ms -- Client: 76 bytes -- Server: 18352 bytes
+	Finish transfer! -- Time: 160 ms -- Client: 76 bytes -- Server: 18310 bytes
 
 You can throttle the connection with many other options, for example with 10 bytes per 100 milliseconds:
 
-	tcpproxy -a www.google.com --bps 10/100
+	$ tcpproxy -a www.google.com --bps 10/100
 
 Other options:
 

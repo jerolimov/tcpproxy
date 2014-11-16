@@ -1,7 +1,7 @@
 {
 	"name": "tcpproxy",
-	"description": "TCPproxy which throttle the connections",
-	"version": "0.1.0",
+	"description": "TCPproxy: Throttle your TCP connections now!",
+	"version": "0.1.1",
 	"author": "Christoph Jerolimov",
 	"license": "MIT",
 	"keywords": [
